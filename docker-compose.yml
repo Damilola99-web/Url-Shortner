@@ -2,14 +2,14 @@ version: '1'
 
 services:
   api:
-    build: api
+    image: public.ecr.aws/x1e5c6u3/url-shortner:latest
     ports:
       - "3000:3000"
     depends_on:
       - db
 
   db:
-    build: db
+    image: public.ecr.aws/x1e5c6u3/redis-db:latest
     ports:
       - "6379:6379"
     volumes:
